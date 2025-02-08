@@ -1,0 +1,40 @@
+import pygame
+import random
+
+# Initialize Pygame
+pygame.init()
+width, height = 800, 600
+screen = pygame.display.set_mode((width, height))
+
+class Person:
+    def __init__(self, x, y):
+        self.x = x
+        self.y = y
+        self.status = "healthy"
+        self.days_infected = 0
+
+    def move(self):
+        self.x += random.randint(-2, 2)
+        self.y += random.randint(-2, 2)
+
+# Create population
+population = [Person(random.randint(0, width), random.randint(0, height)) for _ in range(100)]
+population[0].status = "infected"  # Patient Zero
+
+# Main loop
+running = True
+while running:
+    screen.fill((0, 0, 0))  # Clear screen
+    
+    for event in pygame.event.get():
+        if event.type == pygame.QUIT:
+            running = False
+    
+    for person in population:
+        person.move()
+        color = (255, 0, 0) if person.status == "infected" else (0, 255, 0)
+        pygame.draw.circle(screen, color, (person.x, person.y), 3)
+    
+    pygame.display.flip()
+
+pygame.quit()
