@@ -23,5 +23,7 @@ print(s1.union(s2))
 print(s1.intersection (s2))
 
 t=(4,9,1,0,20)
+L=[]
 for x in t:
+    L.append
     print(x)
