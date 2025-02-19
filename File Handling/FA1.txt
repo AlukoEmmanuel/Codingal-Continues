@@ -1,0 +1,4 @@
+Hello World!
+This is a demonstration file.
+Python file operations are fun!
+Count the vowels: A, E, I, O, U.
