@@ -9,7 +9,7 @@ print(fo.read(5))
 fo.close()
 
 #3) count the number of vowels in the file
-fo=open("f1.txt")
+fgit pusho=open("f1.txt")
 ch=fo.read(1)
 c=0
 while ch:#)if ch is existing
