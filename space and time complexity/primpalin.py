@@ -14,3 +14,5 @@ for n in range(1,a+1):
             temp=temp//10
         if rev==n:
             print(n,"prime and palindrone",n)
+        else:
+            print(n,"prime but not palindrone")
